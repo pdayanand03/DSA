@@ -1,5 +1,5 @@
-/*Implement function called countUniqueValue whcih accepts a sorted array,  and counts the unique value in array. 
-There can be negative numbers in array but it will always be sorted
+/*Implement function called countUniqueValue whcih accepts a sorted array,  and counts the unique value in array. There can be negative numbers in array
+but it will always be sorted
 countUniqueValue([1,1,1,1,1,2]) //2
 countUniqueValue([1,2,3,4,4,4,7,7,12,12,13]) //7
 countUniqueValue([]) //0
@@ -21,8 +21,8 @@ overall its O(1)
 //Using Multipointer
 function countUniqueValue(arr){
     if(!arr.length){
-      // return 0; //return length
-        return []; //return Array
+      return 0; //return length
+        // return []; //return Array
     }
     let i=0;
     for(let j=1; j<arr.length; j++){
@@ -30,8 +30,8 @@ function countUniqueValue(arr){
           arr[++i] = arr[j];  
         }
     }
-    // return i+1;  //return unique count value
-    return arr.slice(0,i+1); //return array
+    return i+1;  //return unique count value
+    // return arr.slice(0,i+1); //return array
 }
 /*
 Note:
