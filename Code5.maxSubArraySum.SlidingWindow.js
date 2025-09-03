@@ -31,11 +31,11 @@ function maxSumArraySum(arr, num) {
     if(arr.length < num){
         return null;
     }
-    let maxSum =0,tempSum, i;
+    let maxSum,tempSum=0, i;
     for(i=0; i<num; i++){
-        maxSum=maxSum+arr[i];
+        tempSum=tempSum+arr[i];
     } //Window Frame sum created
-    tempSum = maxSum;
+    maxSum = tempSum;
     for (j=i;j<arr.length;j++){
         tempSum = tempSum + arr[j] -arr[j-num];
         if(tempSum > maxSum){
